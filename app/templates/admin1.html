@@ -1,0 +1,23 @@
+
+{% extends "base.html" %}
+{% block content %}
+<article>
+  <h2>Panel Admin 1</h2>
+  <form id="docsForm">
+    <label>ID de Cliente
+      <input type="number" id="docsClientId" placeholder="1" required>
+    </label>
+    <button type="submit">Listar documentos</button>
+  </form>
+  <pre id="docsOut"></pre>
+
+  <hr>
+  <form id="reportForm">
+    <label>ID de Cliente
+      <input type="number" id="reportClientId" placeholder="1" required>
+    </label>
+    <button type="submit">Ver reporte</button>
+  </form>
+  <pre id="reportOut"></pre>
+</article>
+{% endblock %}

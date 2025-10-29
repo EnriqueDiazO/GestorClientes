@@ -1,0 +1,35 @@
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title if title else "Gestión de Clientes" }}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <style>
+      .container { max-width: 980px; }
+      .hidden { display: none; }
+      nav { margin-bottom: 1rem; }
+      code { background: #f5f5f5; padding: .125rem .25rem; border-radius: 4px; }
+    </style>
+  </head>
+  <body>
+    <nav class="container-fluid">
+      <ul>
+        <li><strong>Gestión de Clientes</strong></li>
+      </ul>
+      <ul>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/login">Login</a></li>
+        <li><a href="/client">Cliente</a></li>
+        <li><a href="/admin1">Admin 1</a></li>
+        <li><a href="/admin2">Admin 2</a></li>
+        <li><a id="logoutLink" href="#" class="secondary">Salir</a></li>
+      </ul>
+    </nav>
+    <main class="container">
+      {% block content %}{% endblock %}
+    </main>
+    <script src="/static/main.js"></script>
+  </body>
+</html>

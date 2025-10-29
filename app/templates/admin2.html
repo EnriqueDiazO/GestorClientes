@@ -1,0 +1,11 @@
+
+{% extends "base.html" %}
+{% block content %}
+<article>
+  <h2>Panel Admin 2 (Dashboard)</h2>
+  <button id="loadKpisBtn">Cargar KPIs</button>
+  <pre id="kpisOut"></pre>
+  <canvas id="chart" width="600" height="300"></canvas>
+</article>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+{% endblock %}

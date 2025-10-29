@@ -1,0 +1,31 @@
+
+{% extends "base.html" %}
+{% block content %}
+<article>
+  <h2>Panel Cliente</h2>
+  <h3>Registrar Cliente</h3>
+  <form id="registerForm">
+    <label>Nombre
+      <input type="text" id="nombre" value="Juan Pérez" required>
+    </label>
+    <label>Teléfono
+      <input type="text" id="telefono" value="5551234567">
+    </label>
+    <button type="submit">Registrar</button>
+  </form>
+  <p id="registerMsg"></p>
+
+  <hr>
+  <h3>Subir Documento</h3>
+  <form id="uploadForm">
+    <label>ID de Cliente
+      <input type="number" id="clientId" placeholder="1" required>
+    </label>
+    <label>Archivo
+      <input type="file" id="fileInput" required>
+    </label>
+    <button type="submit">Subir</button>
+  </form>
+  <p id="uploadMsg"></p>
+</article>
+{% endblock %}
