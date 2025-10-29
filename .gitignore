@@ -1,0 +1,121 @@
+# --- Entornos virtuales y dependencias ---
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.so
+*.egg-info/
+*.egg
+*.manifest
+*.spec
+*.log
+*.sqlite3
+.DS_Store
+
+# --- Archivos de configuración locales ---
+.env
+.env.*
+!env.example
+!.env.example
+!.env.sample
+!.env.general-sample
+
+# --- Archivos temporales del sistema ---
+Thumbs.db
+desktop.ini
+*.tmp
+*.swp
+*.bak
+
+# --- Archivos de desarrollo ---
+.idea/
+.vscode/
+.history/
+.mypy_cache/
+pytest_cache/
+.coverage
+.pytest_cache/
+.pyre/
+__snapshots__/
+coverage.xml
+
+# --- Compilaciones / artefactos ---
+build/
+dist/
+*.egg-info/
+*.manifest
+*.spec
+
+# --- Archivos de base de datos locales ---
+app.db
+*.sqlite
+*.db
+*.db-journal
+*.sqlite3
+*.sqlite3-journal
+
+# --- Archivos subidos por usuarios ---
+uploads/
+media/
+static/uploads/
+*.pdf
+*.jpg
+*.png
+*.jpeg
+*.xls
+*.xlsx
+*.csv
+
+# --- Archivos de documentación y exportación ---
+docs/_build/
+docs/build/
+site/
+*.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
+*.pdf
+*.pptx
+*.zip
+
+# --- Docker ---
+*.pid
+*.seed
+*.pid.lock
+docker-compose.override.yml
+# Volúmenes persistentes locales
+pgdata/
+postgres_data/
+tmp/
+*.log
+
+# --- Node/Frontend (si se añade más adelante) ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+.env.local
+
+# --- Visual Studio / PyCharm ---
+.idea/
+.vscode/
+*.iml
+
+# --- Cache del navegador y front ---
+app/static/cache/
+app/static/__pycache__/
+
+# --- Backups automáticos ---
+*.bak
+*.backup
+*.old
+*.orig
+
+# --- Archivos de prueba o depuración ---
+test.db
+test_*.json
+debug.log
+debug/
