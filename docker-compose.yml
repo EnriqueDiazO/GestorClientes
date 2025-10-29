@@ -1,0 +1,37 @@
+
+version: "3.9"
+
+services:
+  api:
+    build: .
+    image: gestion-clientes-web:latest
+    container_name: gestion-clientes-api
+    environment:
+      - DATABASE_URL=${DATABASE_URL:-sqlite:///./app.db}
+      - SECRET_KEY=${SECRET_KEY:-supersecret_for_dev_only_change_me}
+      - ACCESS_TOKEN_EXPIRE_MINUTES=${ACCESS_TOKEN_EXPIRE_MINUTES:-60}
+      - UPLOAD_DIR=${UPLOAD_DIR:-./uploads}
+    volumes:
+      - ./:/app
+      - uploads:/app/uploads
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+  db:
+    image: postgres:16
+    container_name: gestion-clientes-db
+    restart: always
+    environment:
+      - POSTGRES_DB=gestion_clientes
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
+  uploads:
