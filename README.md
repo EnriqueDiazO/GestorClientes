@@ -12,6 +12,18 @@ python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 cp .env.example .env
 python -m app.db_init   # crea DB y usuarios demo
+
+```
+## Opción 1 
+```bash
+# para visualizar la interfaz gráfica
+uvicorn app.main_with_ui:app --reload
+```
+Abrir: <http://127.0.0.1:8000>
+
+## Opción 2
+```bash
+# para visualizar los endpoints
 uvicorn app.main:app --reload
 ```
 Abrir: <http://127.0.0.1:8000/docs>
